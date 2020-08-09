@@ -16,6 +16,5 @@ func dummy() *Data {
 }
 
 func main() {
-
-fmt.Println(dummy())
+    fmt.Println(dummy())
 }
