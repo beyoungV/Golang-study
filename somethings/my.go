@@ -33,13 +33,13 @@ set PKG_CONFIG=pkg-config
 set GOGCCFLAGS=-m64 -mthreads -fmessage-length=0 -fdebug-prefix-map=C:\Users\wicky\AppData\Local\Temp\go-build716206338=/tmp/go-build -gno-record-gcc-switches
 
 E:\Go-workspace\bin>dir /b /l
-dlv.exe
-go-outline.exe
-gocode-gomod.exe
-gocode.exe
-godef.exe
-goimports.exe
-golint.exe
-gopkgs.exe
-gopls.exe
-goreturns.exe
+dlv
+go-outline
+gocode-gomod
+gocode
+godef
+goimports
+golint
+gopkgs
+gopls
+goreturns
