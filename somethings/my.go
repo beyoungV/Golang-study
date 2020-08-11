@@ -43,3 +43,8 @@ golint
 gopkgs
 gopls
 goreturns
+
+The code in the workspace failed to compile (see the error message below).
+If you believe this is a mistake, please file an issue: https://github.com/golang/go/issues/new.
+go [-e -json -compiled=true -test=true -export=false -deps=true -find=false -- ./]: exit status 1: go: cannot find main module; see 'go help modules'
+: packages.Load error
