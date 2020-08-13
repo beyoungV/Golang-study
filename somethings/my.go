@@ -48,3 +48,13 @@ The code in the workspace failed to compile (see the error message below).
 If you believe this is a mistake, please file an issue: https://github.com/golang/go/issues/new.
 go [-e -json -compiled=true -test=true -export=false -deps=true -find=false -- ./]: exit status 1: go: cannot find main module; see 'go help modules'
 : packages.Load error
+
+//go tools安装
+mkdir -p $env:GOPATH/src/golang.org/x
+cd $env:GOPATH/src/golang.org/x
+git clone https://github.com/golang/tools.git
+cd tools/cmd/
+go install ...或go get ...
+
+godoc -http=:6060
+go doc url
