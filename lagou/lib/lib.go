@@ -23,6 +23,7 @@ func init()  {
     header.Add("Referer","https://www.lagou.com/")
     header.Add("Upgrade-Insecure-Requests","1")
     header.Add("User-Agent","Mozilla/5.0 (Macintosh; Intel Mac OS X 9_3_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3112.113 Safari/535.36\"")
+
     lagou.Register()
 }
 
@@ -73,12 +74,17 @@ var lagouRuleTree = &RuleTree{
                 dom:=ctx.GetDom()
                 dom.Find("div.list_item_top").Each(func(i int, selection *goquery.Selection) {
                     jobName:=selection.Find("div.p_top").Find("h3").Text()
+
                     city:=selection.Find("div.p_top").Find("em").Text()
-                    city=strings.Split(city,"·")[0
+
+                    city=strings.Split(city,"·")[0]
+
                     salay:=selection.Find("div.p_bot").Find("span.money").Text()
+
                     company:=selection.Find("div.company").Find("a").Text()
+
                     ctx.Output(map[int]interface{}{
-                        0: jobName,
+                        0:jobName,
                         1:salay,
                         2:city,
                         3:company,
